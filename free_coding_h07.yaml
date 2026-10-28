@@ -46,8 +46,12 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: ''
-  console: ''
+  stdout: |-
+    3
+    10
+  console: |-
+    3
+    10
   status: pass
   feedback:
     on_pass:
@@ -55,14 +59,3 @@ testcases:
       Printed: 3, then 10. If you wrote a = b then b = a without temp, both would end up as 3.'
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: ''
-  console: ''
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.

@@ -59,18 +59,4 @@ testcases:
       to 10, then balance = 100 - 10 = 90.'
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: |-
-    90
-    10
-  console: |-
-    90
-    10
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+

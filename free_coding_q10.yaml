@@ -40,22 +40,14 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: Affordable
-  console: Affordable
+  stdout: |-
+    Affordable
+  console: |-
+    Affordable
   status: pass
   feedback:
     on_pass:
     - Correct! price - 10 = 30 - 10 = 20. Since 20 <= 25 is True, 'Affordable' is printed.
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: Affordable
-  console: Affordable
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+

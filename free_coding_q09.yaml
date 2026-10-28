@@ -42,22 +42,14 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: '1'
-  console: '1'
+  stdout: |-
+    1
+  console: |-
+    1
   status: pass
   feedback:
     on_pass:
     - Correct! x + y = 12 + 5 = 17. Since 17 > 15 is True, result is assigned 1.
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: '1'
-  console: '1'
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+

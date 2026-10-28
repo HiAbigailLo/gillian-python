@@ -42,22 +42,14 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: '40'
-  console: '40'
+  stdout: |-
+    40
+  console: |-
+    40
   status: pass
   feedback:
     on_pass:
     - 'Correct! 45 >= 50 is False, so the else-branch runs: score = 45 - 5 = 40.'
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: '40'
-  console: '40'
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+

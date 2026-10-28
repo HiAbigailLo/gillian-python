@@ -46,8 +46,10 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: '5'
-  console: '5'
+  stdout: |-
+    5
+  console: |-
+    5
   status: pass
   feedback:
     on_pass:
@@ -55,14 +57,4 @@ testcases:
       Final n = 5.
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: '5'
-  console: '5'
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+

@@ -52,8 +52,14 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: ''
-  console: ''
+  stdout: |-
+    Mid
+    11
+    7
+  console: |-
+    Mid
+    11
+    7
   status: pass
   feedback:
     on_pass:
@@ -61,14 +67,3 @@ testcases:
       18 > 20 is False, 18 > 12 is True, so ''Mid'' is printed. Then x (11) and y (7) are printed.'
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: ''
-  console: ''
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.

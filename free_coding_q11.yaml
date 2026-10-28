@@ -40,22 +40,14 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: Small
-  console: Small
+  stdout: |-
+    Small
+  console: |-
+    Small
   status: pass
   feedback:
     on_pass:
     - Correct! a * b = 4 * 6 = 24. Since 24 >= 25 is False, the else-branch runs and 'Small' is printed.
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: Small
-  console: Small
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+

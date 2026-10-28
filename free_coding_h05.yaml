@@ -46,8 +46,12 @@ testcases:
 - title: Expected Output
   visible: true
   stdin: []
-  stdout: ''
-  console: ''
+  stdout: |-
+    -2
+    8
+  console: |-
+    -2
+    8
   status: pass
   feedback:
     on_pass:
@@ -55,14 +59,4 @@ testcases:
       because y already holds its new value. Printed: -2, then 8.'
     on_fail:
     - Your output doesn't match. Re-read the steps and trace each value.
-- title: Hidden Output Check
-  visible: false
-  stdin: []
-  stdout: ''
-  console: ''
-  status: pass
-  feedback:
-    on_pass:
-    - Hidden validation passed!
-    on_fail:
-    - Hidden validation failed. Check exact spacing and formatting of your print.
+    
