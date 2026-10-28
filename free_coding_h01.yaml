@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h01.py
+license: MIT
+locale: en-US
+id: free_coding_h01
+title: Updating a variable using its own value (x = x + n) inside a branch
+description: 'Practice: Updating a variable using its own value (x = x + n) inside a branch; >= at a boundary.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - updating-a-variable-using-its-own-value-x-x-n-inside-a-branch
+  - at-a-boundary
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets points to 60. If points is greater than or equal to 60, add 15 to points and store it back. Otherwise, subtract 10 from points and store it back. Print the final value of points.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      points = 60
+      if points >= 60:
+          points = points + 15
+      else:
+          points = points - 10
+      print(points)
+  placeholder: |-
+    # 1. Set points to 60.
+    # 2. If points is greater than or equal to 60, add 15 to points and store it back.
+    # 3. Otherwise, subtract 10 from points and store it back.
+    # 4. Print the final value of points.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! 60 >= 60 is True, so the if branch runs. points = points + 15 takes the current value 60,
+      adds 15, and stores 75 back into points. The else branch is skipped.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

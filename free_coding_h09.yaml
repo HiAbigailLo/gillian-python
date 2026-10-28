@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h09.py
+license: MIT
+locale: en-US
+id: free_coding_h09
+title: Multiple sequential updates to one variable plus a string assignment within a branch
+description: 'Practice: Multiple sequential updates to one variable plus a string assignment within a
+  branch.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - multiple-sequential-updates-to-one-variable-plus-a-string-assignment-within-a-branch
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets stock to 12 and order to 5. If stock minus order is greater than or equal to 10, subtract order from stock and store it back, then assign status the value 'OK'. Otherwise, subtract order from stock and store it back, then add 20 to stock and store it back, then assign status the value 'Restocked'. Print stock and then print status.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      stock = 12
+      order = 5
+      if stock - order >= 10:
+          stock = stock - order
+          status = 'OK'
+      else:
+          stock = stock - order
+          stock = stock + 20
+          status = 'Restocked'
+      print(stock)
+      print(status)
+  placeholder: |-
+    # 1. Set stock to 12 and order to 5.
+    # 2. If stock minus order is greater than or equal to 10, subtract order from stock and store it back, then assign status the value 'OK'.
+    # 3. Otherwise, subtract order from stock and store it back, then add 20 to stock and store it back, then assign status the value 'Restocked'.
+    # 4. Print stock and then print status.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! stock - order is 7, and 7 >= 10 is False, so the else runs. stock becomes 12 - 5 = 7, then
+      7 + 20 = 27, and status is 'Restocked'. Each line uses the value left by the line before it.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

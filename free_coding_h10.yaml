@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h10.py
+license: MIT
+locale: en-US
+id: free_coding_h10
+title: 'Integration: conditional update followed by an if/elif/else on the updated values'
+description: 'Practice: Integration: conditional update followed by an if/elif/else on the updated values.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - integration-conditional-update-followed-by-an-if-elif-else-on-the-updated-values
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets x to 4 and y to 7. If x multiplied by 2 is greater than y, set x to x plus y. Otherwise, set y to y minus x. Then, in a separate if statement, if x plus y is greater than 20, print 'High'. Else if x plus y is greater than 12, print 'Mid'. Otherwise, print 'Low'. Finally, print x and then print y.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      x = 4
+      y = 7
+      if x * 2 > y:
+          x = x + y
+      else:
+          y = y - x
+      if x + y > 20:
+          print('High')
+      elif x + y > 12:
+          print('Mid')
+      else:
+          print('Low')
+      print(x)
+      print(y)
+  placeholder: |-
+    # 1. Set x to 4 and y to 7.
+    # 2. If x multiplied by 2 is greater than y, set x to x plus y.
+    # 3. Otherwise, set y to y minus x.
+    # 4. Then, in a separate if statement, if x plus y is greater than 20, print 'High'.
+    # 5. Else if x plus y is greater than 12, print 'Mid'.
+    # 6. Otherwise, print 'Low'.
+    # 7. Finally, print x and then print y.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! x * 2 is 8, and 8 > 7 is True, so x becomes 4 + 7 = 11 (y stays 7). Next, x + y is 18:
+      18 > 20 is False, 18 > 12 is True, so ''Mid'' is printed. Then x (11) and y (7) are printed.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

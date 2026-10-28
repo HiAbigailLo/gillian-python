@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m10.py
+license: MIT
+locale: en-US
+id: free_coding_m10
+title: Division repeated in an if/elif/else chain
+description: 'Practice: Division repeated in an if/elif/else chain; decimal result between thresholds.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - division-repeated-in-an-if-elif-else-chain
+  - decimal-result-between-thresholds
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets distance to 100 and time to 8. If distance divided by time is greater than 15, assign label the value 'Fast'. Else if distance divided by time is greater than 10, assign label the value 'Moderate'. Otherwise, assign label the value 'Slow'. Print label.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      distance = 100
+      time = 8
+      if distance / time > 15:
+          label = 'Fast'
+      elif distance / time > 10:
+          label = 'Moderate'
+      else:
+          label = 'Slow'
+      print(label)
+  placeholder: |-
+    # 1. Set distance to 100 and time to 8.
+    # 2. If distance divided by time is greater than 15, assign label the value 'Fast'.
+    # 3. Else if distance divided by time is greater than 10, assign label the value 'Moderate'.
+    # 4. Otherwise, assign label the value 'Slow'.
+    # 5. Print label.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! distance / time is 12.5. 12.5 > 15 is False, so Python checks the elif: 12.5 > 10 is True,
+      so label is ''Moderate''.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

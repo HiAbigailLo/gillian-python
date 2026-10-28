@@ -1,0 +1,66 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h04.py
+license: MIT
+locale: en-US
+id: free_coding_h04
+title: Two sequential if statements where the first update changes the second decision
+description: 'Practice: Two sequential if statements where the first update changes the second decision.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - two-sequential-if-statements-where-the-first-update-changes-the-second-decision
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets k to 4. If k multiplied by 3 is greater than 10, add 5 to k and store it back. Otherwise, subtract 1 from k and store it back. Then, in a separate if statement, if k is less than 10, subtract 3 from k and store it back. Print the final value of k.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      k = 4
+      if k * 3 > 10:
+          k = k + 5
+      else:
+          k = k - 1
+      if k < 10:
+          k = k - 3
+      print(k)
+  placeholder: |-
+    # 1. Set k to 4.
+    # 2. If k multiplied by 3 is greater than 10, add 5 to k and store it back.
+    # 3. Otherwise, subtract 1 from k and store it back.
+    # 4. Then, in a separate if statement, if k is less than 10, subtract 3 from k and store it back.
+    # 5. Print the final value of k.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! k * 3 is 12, and 12 > 10 is True, so k becomes 9. The second if is checked separately
+      using the updated k: 9 < 10 is True, so k becomes 6. Printed: 6.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

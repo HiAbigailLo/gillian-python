@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h03.py
+license: MIT
+locale: en-US
+id: free_coding_h03
+title: Arithmetic condition decides whether a second variable is reassigned before it is used
+description: 'Practice: Arithmetic condition decides whether a second variable is reassigned before it
+  is used.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - arithmetic-condition-decides-whether-a-second-variable-is-reassigned-before-it-is-used
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets savings to 200 and cost to 120. If savings minus cost is greater than or equal to 100, subtract cost from savings and store it back. Otherwise, set cost to 50 and then subtract cost from savings and store it back. Print savings and then print cost.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      savings = 200
+      cost = 120
+      if savings - cost >= 100:
+          savings = savings - cost
+      else:
+          cost = 50
+          savings = savings - cost
+      print(savings)
+      print(cost)
+  placeholder: |-
+    # 1. Set savings to 200 and cost to 120.
+    # 2. If savings minus cost is greater than or equal to 100, subtract cost from savings and store it back.
+    # 3. Otherwise, set cost to 50 and then subtract cost from savings and store it back.
+    # 4. Print savings and then print cost.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! savings - cost is 80, and 80 >= 100 is False, so the else runs. cost is set to 50 first,
+      then savings = 200 - 50 = 150. Printed: 150, then 50. The subtraction uses the new cost, not the
+      original 120.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

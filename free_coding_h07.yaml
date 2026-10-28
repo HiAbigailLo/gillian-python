@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h07.py
+license: MIT
+locale: en-US
+id: free_coding_h07
+title: Swapping two values with a temporary variable inside a branch
+description: 'Practice: Swapping two values with a temporary variable inside a branch.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - swapping-two-values-with-a-temporary-variable-inside-a-branch
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets a to 10 and b to 3. If a minus b is greater than 5, swap the values of a and b using a variable named temp (set temp to a, then set a to b, then set b to temp). Otherwise, add 1 to a and add 1 to b. Print a and then print b.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      a = 10
+      b = 3
+      if a - b > 5:
+          temp = a
+          a = b
+          b = temp
+      else:
+          a = a + 1
+          b = b + 1
+      print(a)
+      print(b)
+  placeholder: |-
+    # 1. Set a to 10 and b to 3.
+    # 2. If a minus b is greater than 5, swap the values of a and b using a variable named temp (set temp to a, then set a to b, then set b to temp).
+    # 3. Otherwise, add 1 to a and add 1 to b.
+    # 4. Print a and then print b.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! a - b is 7, and 7 > 5 is True. temp stores 10, a is set to 3, and b is set to temp (10).
+      Printed: 3, then 10. If you wrote a = b then b = a without temp, both would end up as 3.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

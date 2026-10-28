@@ -1,0 +1,66 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m01.py
+license: MIT
+locale: en-US
+id: free_coding_m01
+title: Addition inside a comparison
+description: 'Practice: Addition inside a comparison; strict greater-than (>) at an equality boundary.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - addition-inside-a-comparison
+  - strict-greater-than-at-an-equality-boundary
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets m to 9 and n to 7. If m plus n is greater than 16, assign result the value 1. Otherwise, assign result the value 0. Print result.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      m = 9
+      n = 7
+      if m + n > 16:
+          result = 1
+      else:
+          result = 0
+      print(result)
+  placeholder: |-
+    # 1. Set m to 9 and n to 7.
+    # 2. If m plus n is greater than 16, assign result the value 1.
+    # 3. Otherwise, assign result the value 0.
+    # 4. Print result.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! m + n is 16. The comparison is 16 > 16, which is False because 16 is equal to 16, not greater
+      than it. So the else branch runs and result is 0. The '>' symbol excludes equality; '>=' would have
+      included it.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m04.py
+license: MIT
+locale: en-US
+id: free_coding_m04
+title: Division producing a decimal inside a comparison
+description: 'Practice: Division producing a decimal inside a comparison; >= at a boundary; assigning
+  a string.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - division-producing-a-decimal-inside-a-comparison
+  - at-a-boundary
+  - assigning-a-string
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets total to 20 and people to 8. If total divided by people is greater than or equal to 2.5, assign share_label the value 'Fair'. Otherwise, assign share_label the value 'Unfair'. Print share_label.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      total = 20
+      people = 8
+      if total / people >= 2.5:
+          share_label = 'Fair'
+      else:
+          share_label = 'Unfair'
+      print(share_label)
+  placeholder: |-
+    # 1. Set total to 20 and people to 8.
+    # 2. If total divided by people is greater than or equal to 2.5, assign share_label the value 'Fair'.
+    # 3. Otherwise, assign share_label the value 'Unfair'.
+    # 4. Print share_label.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! total / people is 2.5 (division keeps decimals). 2.5 >= 2.5 is True because '>=' includes
+      equality, so share_label is 'Fair'.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

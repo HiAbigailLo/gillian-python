@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h08.py
+license: MIT
+locale: en-US
+id: free_coding_h08
+title: Equality check with arithmetic, then a second if/else that depends on the updated value
+description: 'Practice: Equality check with arithmetic, then a second if/else that depends on the updated
+  value.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - equality-check-with-arithmetic
+  - then-a-second-if-else-that-depends-on-the-updated-value
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets count to 9. If count plus 1 is equal to 10, multiply count by 2 and store it back. Then, in a separate if statement, if count is greater than 15, subtract 4 from count and store it back. Otherwise, add 4 to count and store it back. Print the final value of count.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      count = 9
+      if count + 1 == 10:
+          count = count * 2
+      if count > 15:
+          count = count - 4
+      else:
+          count = count + 4
+      print(count)
+  placeholder: |-
+    # 1. Set count to 9.
+    # 2. If count plus 1 is equal to 10, multiply count by 2 and store it back.
+    # 3. Then, in a separate if statement, if count is greater than 15, subtract 4 from count and store it back.
+    # 4. Otherwise, add 4 to count and store it back.
+    # 5. Print the final value of count.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! count + 1 is 10, and 10 == 10 is True, so count becomes 18 (note count + 1 in the condition
+      does not change count). The second if uses the new value: 18 > 15 is True, so count becomes 14.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

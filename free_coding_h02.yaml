@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h02.py
+license: MIT
+locale: en-US
+id: free_coding_h02
+title: Two dependent state updates in a branch
+description: 'Practice: Two dependent state updates in a branch; tracking which variable changes first.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - two-dependent-state-updates-in-a-branch
+  - tracking-which-variable-changes-first
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets a to 5 and b to 9. If a is greater than b, set a to a minus b and add 2 to b. Otherwise, set b to b minus a and add 1 to a. Print a and then print b.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      a = 5
+      b = 9
+      if a > b:
+          a = a - b
+          b = b + 2
+      else:
+          b = b - a
+          a = a + 1
+      print(a)
+      print(b)
+  placeholder: |-
+    # 1. Set a to 5 and b to 9.
+    # 2. If a is greater than b, set a to a minus b and add 2 to b.
+    # 3. Otherwise, set b to b minus a and add 1 to a.
+    # 4. Print a and then print b.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! 5 > 9 is False, so the else branch runs. First b = b - a = 9 - 5 = 4 (a is still 5 at
+      this point). Then a = a + 1 = 6. Printed: 6, then 4. Because b is updated before a, the subtraction
+      uses a''s original value.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

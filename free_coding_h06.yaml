@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h06.py
+license: MIT
+locale: en-US
+id: free_coding_h06
+title: State updates inside an if/elif/else chain
+description: 'Practice: State updates inside an if/elif/else chain; one branch updates two variables.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - state-updates-inside-an-if-elif-else-chain
+  - one-branch-updates-two-variables
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets level to 3 and xp to 250. If xp is greater than or equal to 300, add 2 to level and store it back. Else if xp is greater than or equal to 200, add 1 to level and subtract 200 from xp, storing both back. Otherwise, set xp to 0. Print level and then print xp.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      level = 3
+      xp = 250
+      if xp >= 300:
+          level = level + 2
+      elif xp >= 200:
+          level = level + 1
+          xp = xp - 200
+      else:
+          xp = 0
+      print(level)
+      print(xp)
+  placeholder: |-
+    # 1. Set level to 3 and xp to 250.
+    # 2. If xp is greater than or equal to 300, add 2 to level and store it back.
+    # 3. Else if xp is greater than or equal to 200, add 1 to level and subtract 200 from xp, storing both back.
+    # 4. Otherwise, set xp to 0.
+    # 5. Print level and then print xp.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! 250 >= 300 is False, so Python checks the elif: 250 >= 200 is True. Both lines in that
+      branch run: level becomes 4 and xp becomes 50. The else is skipped. Printed: 4, then 50.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

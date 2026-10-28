@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_h05.py
+license: MIT
+locale: en-US
+id: free_coding_h05
+title: Division in the condition
+description: 'Practice: Division in the condition; second update in the branch uses the just-updated variable
+  (can go negative).'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - division-in-the-condition
+  - second-update-in-the-branch-uses-the-just-updated-variable-can-go-negative
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets x to 6 and y to 2. If x divided by y is greater than or equal to 3, set y to y plus x, and then set x to x minus y. Otherwise, set x to 0. Print x and then print y.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      x = 6
+      y = 2
+      if x / y >= 3:
+          y = y + x
+          x = x - y
+      else:
+          x = 0
+      print(x)
+      print(y)
+  placeholder: |-
+    # 1. Set x to 6 and y to 2.
+    # 2. If x divided by y is greater than or equal to 3, set y to y plus x, and then set x to x minus y.
+    # 3. Otherwise, set x to 0.
+    # 4. Print x and then print y.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! x / y is 3.0, and 3.0 >= 3 is True. y becomes 2 + 6 = 8. Then x = x - y = 6 - 8 = -2,
+      because y already holds its new value. Printed: -2, then 8.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

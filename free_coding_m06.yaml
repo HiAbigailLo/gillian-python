@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m06.py
+license: MIT
+locale: en-US
+id: free_coding_m06
+title: Different arithmetic in each condition of an if/elif/else chain
+description: 'Practice: Different arithmetic in each condition of an if/elif/else chain.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - different-arithmetic-in-each-condition-of-an-if-elif-else-chain
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets temp to 68 and change to 5. If temp plus change is greater than or equal to 75, assign status the value 'Hot'. Else if temp minus change is less than 60, assign status the value 'Cold'. Otherwise, assign status the value 'Mild'. Print status.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      temp = 68
+      change = 5
+      if temp + change >= 75:
+          status = 'Hot'
+      elif temp - change < 60:
+          status = 'Cold'
+      else:
+          status = 'Mild'
+      print(status)
+  placeholder: |-
+    # 1. Set temp to 68 and change to 5.
+    # 2. If temp plus change is greater than or equal to 75, assign status the value 'Hot'.
+    # 3. Else if temp minus change is less than 60, assign status the value 'Cold'.
+    # 4. Otherwise, assign status the value 'Mild'.
+    # 5. Print status.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! temp + change is 73, and 73 >= 75 is False. Next, temp - change is 63, and 63 < 60 is False.
+      Neither condition is True, so the else branch sets status to 'Mild'. Neither comparison changes
+      temp or change.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_q16.py
+license: MIT
+locale: en-US
+id: free_coding_q16
+title: Two sequential independent if/else blocks
+description: 'Practice: Two sequential independent if/else blocks; output of first block determines input
+  of second.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - two-sequential-independent-if-else-blocks
+  - output-of-first-block-determines-input-of-second
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets n to 7. If n multiplied by 2 is greater than 15, add 3 to n and store it back. Otherwise, subtract 2 from n and store it back. Then, in a separate if statement, if n is greater than 8, multiply n by 2 and store it back. Print the final value of n.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      n = 7
+      if n * 2 > 15:
+          n = n + 3
+      else:
+          n = n - 2
+      if n > 8:
+          n = n * 2
+      print(n)
+  placeholder: |-
+    # 1. Set n to 7.
+    # 2. If n multiplied by 2 is greater than 15, add 3 to n and store it back.
+    # 3. Otherwise, subtract 2 from n and store it back.
+    # 4. Then, in a separate if statement, if n is greater than 8, multiply n by 2 and store it back.
+    # 5. Print the final value of n.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: '5'
+  console: '5'
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! n * 2 = 14. Since 14 > 15 is False, n = 7 - 2 = 5. Then 5 > 8 is False, so n is not changed.
+      Final n = 5.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: '5'
+  console: '5'
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

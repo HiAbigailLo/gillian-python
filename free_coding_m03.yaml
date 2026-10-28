@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m03.py
+license: MIT
+locale: en-US
+id: free_coding_m03
+title: Multiplication inside an equality comparison (==) vs. assignment (=)
+description: 'Practice: Multiplication inside an equality comparison (==) vs. assignment (=).'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - multiplication-inside-an-equality-comparison-vs-assignment
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets w to 7 and h to 3. If w multiplied by h is equal to 21, print 'Match'. Otherwise, print 'No match'.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      w = 7
+      h = 3
+      if w * h == 21:
+          print('Match')
+      else:
+          print('No match')
+  placeholder: |-
+    # 1. Set w to 7 and h to 3.
+    # 2. If w multiplied by h is equal to 21, print 'Match'.
+    # 3. Otherwise, print 'No match'.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! w * h is 21, and 21 == 21 is True, so 'Match' is printed. A double equals sign (==) is
+      needed to compare; using a single = inside an if would be an error because = means 'store a value'.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

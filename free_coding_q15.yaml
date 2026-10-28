@@ -1,0 +1,76 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_q15.py
+license: MIT
+locale: en-US
+id: free_coding_q15
+title: Arithmetic in condition must be evaluated first to select branch
+description: 'Practice: Arithmetic in condition must be evaluated first to select branch; both branches
+  update the same two variables differently.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - arithmetic-in-condition-must-be-evaluated-first-to-select-branch
+  - both-branches-update-the-same-two-variables-differently
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets balance to 100 and fee to 30. If balance minus fee is greater than or equal to 80, subtract fee from balance and store it back. Otherwise, set fee to 10 and then subtract fee from balance and store it back. Print balance and then print fee.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      balance = 100
+      fee = 30
+      if balance - fee >= 80:
+          balance = balance - fee
+      else:
+          fee = 10
+          balance = balance - fee
+      print(balance)
+      print(fee)
+  placeholder: |-
+    # 1. Set balance to 100 and fee to 30.
+    # 2. If balance minus fee is greater than or equal to 80, subtract fee from balance and store it back.
+    # 3. Otherwise, set fee to 10 and then subtract fee from balance and store it back.
+    # 4. Print balance and then print fee.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: |-
+    90
+    10
+  console: |-
+    90
+    10
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! balance - fee = 100 - 30 = 70. Since 70 >= 80 is False, the else-branch runs: fee is reset
+      to 10, then balance = 100 - 10 = 90.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: |-
+    90
+    10
+  console: |-
+    90
+    10
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

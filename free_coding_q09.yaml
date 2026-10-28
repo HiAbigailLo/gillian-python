@@ -1,0 +1,63 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_q09.py
+license: MIT
+locale: en-US
+id: free_coding_q09
+title: Arithmetic expression (addition) evaluated inside if condition
+description: 'Practice: Arithmetic expression (addition) evaluated inside if condition.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - arithmetic-expression-addition-evaluated-inside-if-condition
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets x to 12 and y to 5. If x plus y is greater than 15, assign result the value 1. Otherwise, assign result the value 0. Print result.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      x = 12
+      y = 5
+      if x + y > 15:
+          result = 1
+      else:
+          result = 0
+      print(result)
+  placeholder: |-
+    # 1. Set x to 12 and y to 5.
+    # 2. If x plus y is greater than 15, assign result the value 1.
+    # 3. Otherwise, assign result the value 0.
+    # 4. Print result.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: '1'
+  console: '1'
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! x + y = 12 + 5 = 17. Since 17 > 15 is True, result is assigned 1.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: '1'
+  console: '1'
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

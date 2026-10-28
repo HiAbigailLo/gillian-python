@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_q14.py
+license: MIT
+locale: en-US
+id: free_coding_q14
+title: Two variables both updated inside the if-branch
+description: 'Practice: Two variables both updated inside the if-branch; else-branch updates only one.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - two-variables-both-updated-inside-the-if-branch
+  - else-branch-updates-only-one
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets x to 8 and y to 3. If x is greater than y, set x to x minus y and add 1 to y. Otherwise, set x to x plus y. Print x and then print y.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      x = 8
+      y = 3
+      if x > y:
+          x = x - y
+          y = y + 1
+      else:
+          x = x + y
+      print(x)
+      print(y)
+  placeholder: |-
+    # 1. Set x to 8 and y to 3.
+    # 2. If x is greater than y, set x to x minus y and add 1 to y.
+    # 3. Otherwise, set x to x plus y.
+    # 4. Print x and then print y.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: |-
+    5
+    4
+  console: |-
+    5
+    4
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! 8 > 3 is True, so the if-branch runs: x = 8 - 3 = 5, y = 3 + 1 = 4. The else-branch is
+      skipped.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: |-
+    5
+    4
+  console: |-
+    5
+    4
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_q10.py
+license: MIT
+locale: en-US
+id: free_coding_q10
+title: Arithmetic expression (subtraction) evaluated inside if condition
+description: 'Practice: Arithmetic expression (subtraction) evaluated inside if condition.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - arithmetic-expression-subtraction-evaluated-inside-if-condition
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets price to 30 and budget to 25. If price minus 10 is less than or equal to budget, print 'Affordable'. Otherwise, print 'Too expensive'.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      price = 30
+      budget = 25
+      if price - 10 <= budget:
+          print('Affordable')
+      else:
+          print('Too expensive')
+  placeholder: |-
+    # 1. Set price to 30 and budget to 25.
+    # 2. If price minus 10 is less than or equal to budget, print 'Affordable'.
+    # 3. Otherwise, print 'Too expensive'.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: Affordable
+  console: Affordable
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! price - 10 = 30 - 10 = 20. Since 20 <= 25 is True, 'Affordable' is printed.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: Affordable
+  console: Affordable
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m09.py
+license: MIT
+locale: en-US
+id: free_coding_m09
+title: Order of operations (parentheses vs. * before +) inside a comparison
+description: 'Practice: Order of operations (parentheses vs. * before +) inside a comparison.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - order-of-operations-parentheses-vs-before-inside-a-comparison
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets a to 3 and b to 5. If the sum of a and b, multiplied by 2, is greater than 15, print 'Yes'. Otherwise, print 'No'.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      a = 3
+      b = 5
+      if (a + b) * 2 > 15:
+          print('Yes')
+      else:
+          print('No')
+  placeholder: |-
+    # 1. Set a to 3 and b to 5.
+    # 2. If the sum of a and b, multiplied by 2, is greater than 15, print 'Yes'.
+    # 3. Otherwise, print 'No'.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - 'Correct! The prompt asks for the sum first, so parentheses are needed: (3 + 5) * 2 = 16, and 16
+      > 15 is True, printing ''Yes''. Writing a + b * 2 would compute 3 + 10 = 13 and wrongly print ''No''.'
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

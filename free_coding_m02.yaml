@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m02.py
+license: MIT
+locale: en-US
+id: free_coding_m02
+title: Subtraction inside a comparison
+description: 'Practice: Subtraction inside a comparison; less-than (<); printing in branches.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - subtraction-inside-a-comparison
+  - less-than
+  - printing-in-branches
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets cost to 50 and discount to 15. If cost minus discount is less than 40, print 'Deal'. Otherwise, print 'No deal'.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      cost = 50
+      discount = 15
+      if cost - discount < 40:
+          print('Deal')
+      else:
+          print('No deal')
+  placeholder: |-
+    # 1. Set cost to 50 and discount to 15.
+    # 2. If cost minus discount is less than 40, print 'Deal'.
+    # 3. Otherwise, print 'No deal'.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! cost - discount is 35. The comparison 35 < 40 is True, so the if branch runs and prints
+      'Deal'. The values of cost and discount themselves are not changed by the comparison.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.

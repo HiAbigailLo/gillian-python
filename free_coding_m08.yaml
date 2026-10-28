@@ -1,0 +1,66 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/free-coding/0.1.0
+source: free_coding_m08.py
+license: MIT
+locale: en-US
+id: free_coding_m08
+title: Division vs. multiplication on opposite sides of a comparison
+description: 'Practice: Division vs. multiplication on opposite sides of a comparison; decimal vs. whole-number
+  equality.'
+authors:
+- first: Abigail
+  last: Lo
+  email: alo3@cmu.edu
+  affiliation: Carnegie Mellon University
+pedagogy:
+  activity: free-coding
+  difficulty: novice
+  prereq_topics:
+  - basic-syntax
+  topics:
+  - division-vs-multiplication-on-opposite-sides-of-a-comparison
+  - decimal-vs-whole-number-equality
+runtime:
+  language: python
+  version: 3
+statement: |
+  Write Python code that sets p to 18 and q to 3. If p divided by q is less than q multiplied by 2, assign result the value 'A'. Otherwise, assign result the value 'B'. Print result.
+elements:
+- type: editable
+  location:
+    snippet: |-
+      p = 18
+      q = 3
+      if p / q < q * 2:
+          result = 'A'
+      else:
+          result = 'B'
+      print(result)
+  placeholder: |-
+    # 1. Set p to 18 and q to 3.
+    # 2. If p divided by q is less than q multiplied by 2, assign result the value 'A'.
+    # 3. Otherwise, assign result the value 'B'.
+    # 4. Print result.
+testcases:
+- title: Expected Output
+  visible: true
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Correct! p / q is 6.0 and q * 2 is 6. Python treats 6.0 and 6 as the same value, so 6.0 < 6 is False,
+      and result is 'B'.
+    on_fail:
+    - Your output doesn't match. Re-read the steps and trace each value.
+- title: Hidden Output Check
+  visible: false
+  stdin: []
+  stdout: ''
+  console: ''
+  status: pass
+  feedback:
+    on_pass:
+    - Hidden validation passed!
+    on_fail:
+    - Hidden validation failed. Check exact spacing and formatting of your print.
